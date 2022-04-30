@@ -7,9 +7,10 @@ const firebaseConfig = {
   projectId: 'luminee-cddcf',
   storageBucket: 'luminee-cddcf.appspot.com',
   messagingSenderId: '265273625224',
-  appId: '1:265273625224:web:e34ae0f3fb24558a37ed3d'
+  appId: '1:265273625224:web:e34ae0f3fb24558a37ed3d',
 };
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
-const firestore = getFirestore(app);
+// eslint-disable-next-line import/prefer-default-export
+export const firestore = getFirestore(app);
