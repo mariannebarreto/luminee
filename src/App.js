@@ -1,11 +1,19 @@
-import LoginScreen from './components/auth/LoginScreen';
+import { Routes, Route } from 'react-router-dom';
+import { React } from 'react';
+import Login from './components/auth/Login';
+import Home from './components/home/Home';
+import ProtectedRoute from './components/ProtectedRoutes';
 
-function App() {
+export default function App() {
   return (
-    <div className="App">
-      <LoginScreen />
-    </div>
+
+    <Routes>
+      <Route path="/" element={<Login />} />
+      <Route
+        path="/home"
+        element={<ProtectedRoute><Home /></ProtectedRoute>}
+      />
+    </Routes>
+
   );
 }
-
-export default App;

@@ -1,7 +1,7 @@
 import { initializeApp } from 'firebase/app';
-import { getFirestore } from 'firebase/firestore';
+import { getAuth } from 'firebase/auth';
 
-const firebaseConfig = {
+export const firebaseConfig = {
   apiKey: 'AIzaSyArQOJp9K4omHjX4-pqzGI_UPxB6ffc7jc',
   authDomain: 'luminee-cddcf.firebaseapp.com',
   projectId: 'luminee-cddcf',
@@ -12,5 +12,5 @@ const firebaseConfig = {
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
-// eslint-disable-next-line import/prefer-default-export
-export const firestore = getFirestore(app);
+export const auth = getAuth(app);
+export default app;
