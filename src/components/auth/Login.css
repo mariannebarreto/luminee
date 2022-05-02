@@ -1,0 +1,52 @@
+.lumineTitle {
+    font-family: 'THE CALIFORNICATION';
+    color: white;
+    font-size: 150px;
+    text-shadow: 3px 8px 10px rgb(237, 209, 86);
+    text-align: center;
+    margin-bottom: 0;
+}
+
+.slogan {
+    font-family: 'BETTER TOGETHER SPACED';
+    color: white;
+    font-size: 50px;
+    text-align: center;
+    margin-top: 5px;
+}
+
+.loginContainer {
+    margin-top: 100px;
+}
+
+.loginWith {
+    font-family: 'COFFEE LATTE';
+    color: white;
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 0px;
+}
+
+.btnContainer {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.btnGoogle {
+    height: 60px;
+    width: 430px;
+    border-radius: 15px;
+    background-color: rgba(93, 60, 6, 0.621);
+    border: 3px solid rgb(254, 239, 179);
+    align-items: center;
+    overflow: hidden;
+    transition: 0.2s;
+    font-family: 'BETTER TOGETHER SPACED';
+    color: bisque;
+    font-size: 50px;
+    text-align: center;
+}
+
+.btnGoogle:hover {
+    box-shadow: 0 0 25px rgb(254, 239, 179);
+}

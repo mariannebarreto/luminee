@@ -1,0 +1,5 @@
+body{
+    background-image: url('./assets/background.jpeg');
+    height: 100vh;
+    background-size: cover;
+}
