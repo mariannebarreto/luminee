@@ -1,28 +1,13 @@
 import React, { useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
-import { Form, Alert, Button } from 'react-bootstrap';
+import { useNavigate } from 'react-router-dom';
+import { Alert } from 'react-bootstrap';
 import './Login.css';
-
-import GoogleButton from 'react-google-button';
 import { useUserAuth } from '../../context/UserAuthContext';
 
 function Login() {
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
-  const [error, setError] = useState('');
-  const { logIn, googleSignIn } = useUserAuth();
+  const [error] = useState('');
+  const { googleSignIn } = useUserAuth();
   const navigate = useNavigate();
-
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    setError('');
-    try {
-      await logIn(email, password);
-      navigate('/home');
-    } catch (err) {
-      setError(err.message);
-    }
-  };
 
   const handleGoogleSignIn = async (e) => {
     e.preventDefault();
@@ -35,7 +20,21 @@ function Login() {
   };
 
   return (
-    <>
+
+    <section className="auth-container">
+      <header className="lumineTitle">Lumine</header>
+      <h2 className="slogan">Enlight your ideas</h2>
+      {error && <Alert variant="danger">{error}</Alert>}
+      <form className="loginContainer">
+        <h2 className="loginWith"> LOGIN WITH:</h2>
+        <div className="btnContainer">
+          <button type="submit" id="signupGoogle" className="btnGoogle" onClick={handleGoogleSignIn}>Google</button>
+        </div>
+      </form>
+
+    </section>
+
+  /* <>
       <div className="p-4 box">
         <h2 className="mb-3">Firebase Auth Login</h2>
         {error && <Alert variant="danger">{error}</Alert>}
@@ -76,7 +75,7 @@ function Login() {
         {' '}
         <Link to="/signup">Sign up</Link>
       </div>
-    </>
+    </> */
   );
 }
 
