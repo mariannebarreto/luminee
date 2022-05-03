@@ -1,0 +1,20 @@
+.notesContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.nameContainer {
+    height: 100px;
+    width: 100%;
+    background-color: rgba(109, 66, 15, 0.536);
+    border: 3px solid rgb(254, 239, 179);
+    font-family: 'THE CALIFORNICATION';
+    color: white;
+    font-size: 50px;
+}
+
+.logOut{
+    background-color: azure;
+}

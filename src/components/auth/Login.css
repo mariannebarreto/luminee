@@ -1,22 +1,31 @@
+.auth-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+
 .lumineTitle {
     font-family: 'THE CALIFORNICATION';
     color: white;
     font-size: 150px;
     text-shadow: 3px 8px 10px rgb(237, 209, 86);
-    text-align: center;
-    margin-bottom: 0;
+    margin-bottom: 0px;
 }
 
+.sloganContainer{
+    margin-top: -60px;
+    
+}
 .slogan {
     font-family: 'BETTER TOGETHER SPACED';
     color: white;
-    font-size: 50px;
-    text-align: center;
-    margin-top: 5px;
+    font-size: 52px ;
 }
 
-.loginContainer {
-    margin-top: 100px;
+.loginContainer{
+margin-top: 15%;
 }
 
 .loginWith {
@@ -24,27 +33,25 @@
     color: white;
     font-size: 30px;
     text-align: center;
-    margin-bottom: 0px;
-}
-
-.btnContainer {
-    margin-top: 20px;
-    text-align: center;
 }
 
 .btnGoogle {
+    margin-top:5px;
     height: 60px;
-    width: 430px;
+    width: 400px;
     border-radius: 15px;
     background-color: rgba(93, 60, 6, 0.621);
     border: 3px solid rgb(254, 239, 179);
-    align-items: center;
     overflow: hidden;
     transition: 0.2s;
     font-family: 'BETTER TOGETHER SPACED';
     color: bisque;
     font-size: 50px;
+    cursor: pointer;
     text-align: center;
+    padding: 0px;
+    line-height: 30px;
+    
 }
 
 .btnGoogle:hover {

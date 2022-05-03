@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { Alert } from 'react-bootstrap';
 import './Login.css';
 import { useUserAuth } from '../../context/UserAuthContext';
 
@@ -23,8 +22,7 @@ function Login() {
 
     <section className="auth-container">
       <header className="lumineTitle">Lumine</header>
-      <h2 className="slogan">Enlight your ideas</h2>
-      {error && <Alert variant="danger">{error}</Alert>}
+      <div className="sloganContainer"><p className="slogan">Enlight your ideas</p></div>
       <form className="loginContainer">
         <h2 className="loginWith"> LOGIN WITH:</h2>
         <div className="btnContainer">

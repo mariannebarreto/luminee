@@ -1,7 +1,7 @@
 import React from 'react';
-import { Button } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
 import { useUserAuth } from '../../context/UserAuthContext';
+import './Home.css';
 
 function Home() {
   const { logOut, user } = useUserAuth();
@@ -15,19 +15,16 @@ function Home() {
     }
   };
   return (
-    <>
-      <div className="p-4 box mt-3 text-center">
-        aqui van las notas
-        {' '}
-        <br />
-        {user && user.email}
+    <section className="notesContainer">
+      <div className="nameContainer">
+        {user.email}
       </div>
-      <div className="d-grid gap-2">
-        <Button variant="primary" onClick={handleLogout}>
+      <div className="btnLogOutContainer">
+        <button type="submit" className="logOUt" onClick={handleLogout}>
           Log out
-        </Button>
+        </button>
       </div>
-    </>
+    </section>
   );
 }
 
