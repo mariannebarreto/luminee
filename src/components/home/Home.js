@@ -20,9 +20,8 @@ function Home() {
         {user.email}
       </div>
       <div className="btnLogOutContainer">
-        <button type="submit" className="logOUt" onClick={handleLogout}>
-          Log out
-        </button>
+        <button type="submit" className="logOUt" onClick={handleLogout}>logout</button>
+        <footer className="menuContainer" />
       </div>
     </section>
   );

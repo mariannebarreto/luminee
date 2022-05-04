@@ -29,6 +29,7 @@ function Login() {
           <button type="submit" id="signupGoogle" className="btnGoogle" onClick={handleGoogleSignIn}>Google</button>
         </div>
       </form>
+      <footer className="footerLogin" />
 
     </section>
 

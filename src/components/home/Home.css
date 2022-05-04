@@ -1,20 +1,40 @@
 .notesContainer {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     text-align: center;
+    background-image: url('../../assets/backgroundNotes.jpeg');
+    height: 100vh;
+    background-size: cover;
 }
 
 .nameContainer {
+    display:flex;
     height: 100px;
     width: 100%;
     background-color: rgba(109, 66, 15, 0.536);
     border: 3px solid rgb(254, 239, 179);
-    font-family: 'THE CALIFORNICATION';
+    font-family: 'TAHU!';
     color: white;
-    font-size: 50px;
+    font-size: 40px;
+    padding-bottom: 0px;
+    justify-content: center;
+    align-items: center;
 }
 
 .logOut{
     background-color: azure;
+    z-index: 1;
+}
+
+.menuContainer {
+    display: flex;
+    align-content: flex-end;
+    height: 100px;
+    width: 100%;
+    background-color: rgba(109, 67, 15, 0.327);
+    border: 3px solid rgb(254, 239, 179);
+    position: fixed;
+    bottom:0;
+    justify-content: center;
+    align-items: center;
 }
