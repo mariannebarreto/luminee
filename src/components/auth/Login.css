@@ -26,16 +26,34 @@
 
 .loginContainer{
 margin-top: 15%;
+text-align: center;
+align-items:center;
+justify-content: center;
 }
 
 .loginWith {
     font-family: 'COFFEE LATTE';
     color: white;
     font-size: 30px;
-    text-align: center;
 }
 
-.btnGoogle {
+.btnContainer{
+    text-align: center;
+    align-items:center;
+    justify-content: center;
+}
+
+/*.g-btn{
+    overflow: hidden;
+    transition: 0.2s;
+    cursor: pointer;display: flex;
+    background-color: aquamarine;
+}
+
+.g-btn:hover {
+    box-shadow: 0 0 40px rgb(179, 240, 254);
+}
+/*.btnGoogle {
     margin-top:5px;
     height: 60px;
     width: 400px;
@@ -56,7 +74,7 @@ margin-top: 15%;
 
 .btnGoogle:hover {
     box-shadow: 0 0 25px rgb(254, 239, 179);
-}
+} */
 
 .footerLogin {
     display: flex;
