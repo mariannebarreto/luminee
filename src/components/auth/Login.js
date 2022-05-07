@@ -27,7 +27,6 @@ function Login() {
       <div className="sloganContainer"><p className="slogan">Enlight your ideas</p></div>
       <form className="loginContainer">
         <Grid container direction="column" alignItems="center" justifyContent="center">
-          <h2 className="loginWith"> OR:  </h2>
           <GoogleButton
             type="light"
             onClick={handleGoogleSignIn}

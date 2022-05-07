@@ -1,14 +1,19 @@
-.notesContainer {
+.notesView {
     display: flex;
     flex-direction: column;
+    align-items: center;
     text-align: center;
     background-image: url('../../assets/backgroundNotes.jpeg');
     height: 100vh;
     background-size: cover;
+    background-repeat: no-repeat;
+  
+  
 }
 
 .nameContainer {
     display:flex;
+    flex-direction: row;
     height: 100px;
     width: 100%;
     background-color: rgba(109, 66, 15, 0.536);
@@ -17,7 +22,7 @@
     color: white;
     font-size: 40px;
     padding-bottom: 0px;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
 }
 
@@ -37,4 +42,10 @@
     bottom:0;
     justify-content: center;
     align-items: center;
+}
+
+.addNote{
+    background-color: transparent;
+    z-index: 1;
+    filter: invert(100%);
 }

@@ -1,6 +1,8 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
+import { MdLogout, MdPostAdd } from 'react-icons/md';
 import { useUserAuth } from '../../context/UserAuthContext';
+import Note from '../notes/Note';
 import './Home.css';
 
 function Home() {
@@ -15,14 +17,19 @@ function Home() {
     }
   };
   return (
-    <section className="notesContainer">
+    <section className="notesView">
       <div className="nameContainer">
         {user.email}
+        <div className="btnContainer">
+          <MdLogout type="submit" className="logOUt" onClick={handleLogout} size="1.3em" />
+        </div>
       </div>
-      <div className="btnLogOutContainer">
-        <button type="submit" className="logOUt" onClick={handleLogout}>logout</button>
-        <footer className="menuContainer" />
+      <div className="notesContainer">
+        <Note />
       </div>
+      <footer className="menuContainer">
+        <MdPostAdd type="submit" className="addNote" size="3.5em" />
+      </footer>
     </section>
   );
 }
