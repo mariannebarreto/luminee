@@ -1,7 +1,7 @@
 import { Routes, Route } from 'react-router-dom';
 import { React } from 'react';
-import './style.css';
 import Home from './components/home/Home';
+import NewNote from './components/notes/NewNote';
 import Login from './components/auth/Login';
 import Signup from './components/auth/SignUp';
 import ProtectedRoute from './components/ProtectedRoutes';
@@ -22,6 +22,7 @@ function App() {
         />
         <Route path="/" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
+        <Route path="/newnote" element={<NewNote />} />
       </Routes>
     </UserAuthContextProvider>
   );

@@ -16,19 +16,23 @@ function Home() {
       console.log(error.message);
     }
   };
+
+  const handleAddNote = () => {
+    navigate('/newnote');
+  };
   return (
     <section className="notesView">
       <div className="nameContainer">
         {user.email}
         <div className="btnContainer">
-          <MdLogout type="submit" className="logOUt" onClick={handleLogout} size="1.3em" />
+          <MdLogout type="submit" className="logOut" onClick={handleLogout} size="1.3em" />
         </div>
       </div>
       <div className="notesContainer">
         <Note />
       </div>
       <footer className="menuContainer">
-        <MdPostAdd type="submit" className="addNote" size="3.5em" />
+        <MdPostAdd type="submit" className="addNote" size="3.5em" onClick={handleAddNote} />
       </footer>
     </section>
   );

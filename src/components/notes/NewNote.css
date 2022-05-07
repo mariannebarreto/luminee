@@ -1,0 +1,40 @@
+body{
+    background-color: rgb(6, 84, 92);
+}
+
+.nameContainerNotes{
+    display:flex;
+    flex-direction: row;
+    height: 100px;
+    width: 100%;
+    background-color: rgba(2, 6, 45, 0.811);
+    border: 3px solid rgb(127, 102, 2);
+    box-shadow: 0 0 40px rgba(189, 157, 30, 0.58);
+    font-family: 'TAHU!';
+    color: white;
+    font-size: 40px;
+    padding-bottom: 0px;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+.menuContainerNotes {
+display: flex;
+align-content: flex-end;
+height: 100px;
+width: 100%;
+background-color: rgba(2, 6, 45, 0.811);
+border: 3px solid rgb(127, 102, 2);
+position: fixed;
+bottom:0;
+justify-content: space-around;
+align-items: center;
+box-shadow: 0 0 40px rgba(189, 157, 30, 0.58);
+}
+
+.iconNote{
+background-color: transparent;
+z-index: 1;
+filter: invert(100%);
+}
