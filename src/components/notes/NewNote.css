@@ -38,3 +38,8 @@ background-color: transparent;
 z-index: 1;
 filter: invert(100%);
 }
+
+.iconNoteDelete{
+background-color: transparent;
+z-index: 1;
+}
