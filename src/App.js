@@ -4,6 +4,7 @@ import { useAuth } from './lib/firebase-config';
 import Home from './components/home/Home';
 import NewNote from './components/notes/NewNote';
 import Login from './components/auth/Login';
+import './App.css';
 
 function App() {
   useAuth();
