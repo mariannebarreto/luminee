@@ -1,23 +1,20 @@
-import React, { useState } from 'react';
+/* eslint-disable no-console */
+import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import Grid from '@mui/material/Grid';
 import GoogleButton from 'react-google-button';
 import './Login.css';
-import { useUserAuth } from '../../context/UserAuthContext';
+import { auth, provider, googlePop } from '../../lib/firebase-config';
 
 function Login() {
-  const [error] = useState('');
-  const { googleSignIn } = useUserAuth();
   const navigate = useNavigate();
 
-  const handleGoogleSignIn = async (e) => {
-    e.preventDefault();
-    try {
-      await googleSignIn();
-      navigate('/home');
-    } catch (err) {
-      console.log(error.message);
-    }
+  const handleGoogleSignIn = async (app) => {
+    console.log(app);
+    await googlePop(auth, provider).then((isAuth) => {
+      navigate('/Home');
+      console.log(isAuth);
+    });
   };
 
   return (
