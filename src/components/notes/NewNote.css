@@ -3,10 +3,11 @@ body{
     padding: 0%;
 }
 
+/*----------- USER DATA DISPLAY + MENU  ------------*/
 .nameContainerNotes{
     display:flex;
     flex-direction: row;
-    height: 100px;
+    height: 130px;
     width: 100%;
     background-color: rgba(2, 6, 45, 0.811);
     border: 3px solid rgb(127, 102, 2);
@@ -55,9 +56,48 @@ box-shadow: 0 0 40px rgba(189, 157, 30, 0.58);
 background-color: transparent;
 z-index: 1;
 filter: invert(100%);
+cursor: pointer;
 }
 
 .iconNoteDelete{
 background-color: transparent;
 z-index: 1;
+cursor: pointer;
+}
+
+/*------------- WRITE AREA ---*/
+
+.writeAreaContainer{
+    display: flex;
+    flex-direction: column;
+    margin-top: 40px;
+    margin-left: 30px;
+    margin-right: 10px;
+}
+
+#titleNote{
+    background-color: transparent;
+    height: 75px;
+    font-family: 'BETTER TOGETHER SPACED';
+    color: white;
+    font-size: 70px;
+    border:none;
+}
+
+#titleNote:focus{
+outline: none;
+}
+
+#bodyNote{
+    margin-top: 40px;
+    background-color: transparent;
+    height: 60px;
+    font-family: 'BETTER TOGETHER SPACED';
+    color: white;
+    font-size: 55px;
+    border: none;
+}
+
+#bodyNote:focus {
+    outline: none;
 }

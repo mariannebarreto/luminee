@@ -6,7 +6,7 @@ import {
   getAuth, GoogleAuthProvider, signInWithPopup, onAuthStateChanged,
 } from 'firebase/auth';
 import {
-  getFirestore, collection, doc, addDoc, deleteDoc, updateDoc,
+  getFirestore, collection, addDoc, serverTimestamp, doc,
 } from 'firebase/firestore';
 import { getStorage } from 'firebase/storage';
 
@@ -21,12 +21,27 @@ export const firebaseConfig = {
 
 // Initialize Firebase
 export const app = initializeApp(firebaseConfig);
-export const auth = getAuth(app);
+export const auth = getAuth();
 export const provider = new GoogleAuthProvider();
 export const googlePop = signInWithPopup;
-export const db = getFirestore(app);
+export const db = getFirestore();
 export const storage = getStorage(app);
-export const colRef = collection(db, 'notes');
+export const notesRef = doc(collection(db, 'notes'));
+
+// -----SAVE NOTES ON FIREBASE
+
+export const notes = (title, note) => {
+  const user = auth.currentUser;
+  const { uid } = user;
+  addDoc(collection(db, 'notes'), {
+    title,
+    note,
+    uid,
+    timestamp: serverTimestamp(),
+  });
+};
+
+// ----- HOOK USEAUTH
 
 export function useAuth() {
   const [currentUser, setCurrentUser] = useState();
@@ -41,28 +56,3 @@ export function useAuth() {
   });
   return currentUser;
 }
-
-export const saveNote = async (newNotes) => {
-  const user = auth.currentUser;
-  // eslint-disable-next-line no-param-reassign
-  newNotes.userId = user.email;
-
-  await addDoc(colRef, newNotes);
-  console.log('nueva nota creada');
-};
-
-export const editNote = async (note, Id) => {
-  const noteToEdit = doc(db, 'notes', Id);
-
-  await updateDoc(noteToEdit, {
-    title: note.title,
-    note: note.note,
-    date: note.date,
-    modif: note.modif,
-    colection: note.collection,
-  });
-};
-
-export const deletedNote = async (Id) => {
-  await deleteDoc(doc(colRef, Id));
-};
