@@ -6,7 +6,7 @@ import {
   getAuth, GoogleAuthProvider, signInWithPopup, onAuthStateChanged,
 } from 'firebase/auth';
 import {
-  getFirestore, collection, addDoc, serverTimestamp, doc,
+  getFirestore, getDocs, collection, addDoc, orderBy, serverTimestamp, doc, query,
 } from 'firebase/firestore';
 import { getStorage } from 'firebase/storage';
 
@@ -37,8 +37,24 @@ export const notes = (title, note) => {
     title,
     note,
     uid,
-    timestamp: serverTimestamp(),
+    date: serverTimestamp(),
   });
+};
+
+// --------- GET NOTES TO RENDER
+
+export const qry = () => {
+  const user = auth.currentUser;
+  const { uid } = user;
+  const q = (query(notesRef, ('uid', '==', uid), orderBy('timestamp', 'desc')));
+  return q;
+};
+
+export const getNotesCol = async () => {
+  const user = auth.currentUser;
+  const { uid } = user;
+  const orderRef = await getDocs(query(notesRef, ('uid', '==', uid), orderBy('timestamp', 'desc')));
+  return orderRef;
 };
 
 // ----- HOOK USEAUTH

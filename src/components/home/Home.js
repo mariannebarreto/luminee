@@ -3,7 +3,7 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { MdLogout, MdPostAdd } from 'react-icons/md';
 import { signOut, getAuth } from 'firebase/auth';
-import Note from '../notes/Note';
+import ShowNotes from '../notes/NotesContainer';
 import './Home.css';
 
 function Home() {
@@ -41,9 +41,9 @@ function Home() {
           <MdLogout type="submit" className="logOut" onClick={handleLogOut} size="1.3em" />
         </div>
       </div>
-      <div className="notesContainer">
-        <Note />
-      </div>
+      <section className="notesContainer">
+        <ShowNotes />
+      </section>
       <footer className="menuContainer">
         <MdPostAdd type="submit" className="addNote" size="3.5em" onClick={handleAddNote} />
       </footer>

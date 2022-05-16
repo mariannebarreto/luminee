@@ -1,0 +1,10 @@
+.notesContainer{
+    display:flex;
+    flex-direction: column;
+}
+
+.littleNote{
+    height: 50px;
+    width:50px;
+    background-color: rgb(4, 108, 104);
+}

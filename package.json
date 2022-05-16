@@ -21,7 +21,8 @@
     "react-scripts": "5.0.1",
     "reactfire": "^4.2.1",
     "styled-components": "^5.3.5",
-    "sweetalert2": "^11.4.10"
+    "sweetalert2": "^11.4.14",
+    "sweetalert2-react-content": "^5.0.0"
   },
   "scripts": {
     "start": "react-scripts start",
