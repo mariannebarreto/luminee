@@ -7,19 +7,19 @@ import { MdDelete } from 'react-icons/md';
 import {
   collection, query, onSnapshot, orderBy,
 } from 'firebase/firestore';
-import { db } from '../../lib/firebase-config';
+import { db, auth } from '../../lib/firebase-config';
 import './NotesContainer.css';
 
-function ShowNotes(props) {
-  const { user } = props;
+function ShowNotes() {
   const [notes, setNotes] = useState([]);
 
-  const getNotes = () => {
+  const getNotes = async () => {
+    const user = auth.currentUser.uid;
     const arrayNotes = [];
-    const q = query(collection(db, 'notes'), orderBy('dateSeconds', 'desc'));
+    const q = query(collection(db, 'notes'), orderBy('date', 'desc'));
     onSnapshot(q, (querySnapshot) => {
       querySnapshot.forEach((docs) => {
-        if (docs.data().UserUID === user.uid) {
+        if (docs.data().user === user.uid) {
           arrayNotes.push({ ...docs.data(), id: docs.id });
         }
       });
@@ -30,7 +30,7 @@ function ShowNotes(props) {
   useEffect(() => {
     getNotes();
   }, []);
-  console.log('si estoy pero no me veo');
+  console.log(notes);
 
   return (
     <section className="allNotes">
