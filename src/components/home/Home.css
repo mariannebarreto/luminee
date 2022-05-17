@@ -48,7 +48,7 @@ flex-direction: row;
 
 .menuContainer {
     display: flex;
-    align-content: flex-end;
+    align-content: center;
     height: 100px;
     width: 100%;
     background-color: rgba(109, 67, 15, 0.327);
@@ -67,5 +67,8 @@ flex-direction: row;
 }
 
 .notesHome{
-    margin-top: 80px;
+    margin-top: 100px;
+    margin-left: 20px;
+    overflow: auto;
+    height: 75%;
 }

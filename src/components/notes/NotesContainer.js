@@ -1,7 +1,7 @@
 /* eslint-disable no-console */
 /* eslint-disable react/prop-types */
 import { useEffect, useState } from 'react';
-import { MdDelete } from 'react-icons/md';
+import { MdDelete, MdEditNote } from 'react-icons/md';
 /* import Swal from 'sweetalert2'; */
 /* import withReactContent from 'sweetalert2-react-content'; */
 import {
@@ -41,7 +41,8 @@ function ShowNotes() {
             <p className="noteTitle">{note.title}</p>
             <p className="noteText">{note.note}</p>
           </div>
-          <footer className="iconLittleNote">
+          <footer className="iconContainer">
+            <MdEditNote className="editIcon" size="1.8em" type="submit" />
             <MdDelete className="deleteIcon" size="1.8em" type="submit" />
           </footer>
         </div>
