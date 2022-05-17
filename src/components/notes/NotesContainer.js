@@ -38,7 +38,7 @@ function ShowNotes() {
         <div key={note.id} className="littleNote">
           <getNotes />
           <p className="noteTitle">{note.title}</p>
-          <p className="noteText">{note.text}</p>
+          <p className="noteText">{note.note}</p>
           <MdDelete className="deleteIcon" size="1.3em" type="submit" />
         </div>
 
