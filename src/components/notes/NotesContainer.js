@@ -15,11 +15,12 @@ function ShowNotes() {
 
   const getNotes = async () => {
     const user = auth.currentUser.uid;
+    const { uid } = user;
     const arrayNotes = [];
     const q = query(collection(db, 'notes'), orderBy('date', 'desc'));
-    onSnapshot(q, (querySnapshot) => {
-      querySnapshot.forEach((docs) => {
-        if (docs.data().user === user.uid) {
+    onSnapshot(q, (QuerySnapshot) => {
+      QuerySnapshot.forEach((docs) => {
+        if (docs.data().user === uid) {
           arrayNotes.push({ ...docs.data(), id: docs.id });
         }
       });
@@ -35,11 +36,14 @@ function ShowNotes() {
   return (
     <section className="allNotes">
       { notes.map((note) => (
-        <div key={note.id} className="littleNote">
-          <getNotes />
-          <p className="noteTitle">{note.title}</p>
-          <p className="noteText">{note.note}</p>
-          <MdDelete className="deleteIcon" size="1.3em" type="submit" />
+        <div className="littleNote">
+          <div key={note.id} className="littleNoteData">
+            <p className="noteTitle">{note.title}</p>
+            <p className="noteText">{note.note}</p>
+          </div>
+          <footer className="iconLittleNote">
+            <MdDelete className="deleteIcon" size="1.8em" type="submit" />
+          </footer>
         </div>
 
       ))}

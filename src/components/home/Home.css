@@ -1,8 +1,5 @@
 .notesView {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
     background-image: url('../../assets/backgroundNotes.jpeg');
     height: 100vh;
     background-size:cover;
@@ -24,6 +21,7 @@
     padding-bottom: 0px;
     justify-content: space-around;
     align-items: center;
+    position: fixed;
 }
 .userContainer{
 display: flex;
@@ -66,4 +64,8 @@ flex-direction: row;
     z-index: 1;
     filter: invert(100%);
     cursor: pointer;
+}
+
+.notesHome{
+    margin-top: 80px;
 }

@@ -1,14 +1,39 @@
-.notesContainer{
-    display:flex;
-    flex-direction: column;
+
+.allNotes{
+    /* padding: 4em; */
+    margin-top: 30px;
+    margin-left: 70px;
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 40px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content: center;
 }
 
 .littleNote{
     height: 200px;
     width:200px;
+    margin-top: 50px;
     background-color: rgb(4, 108, 104);
+}
+
+.littleNoteData{
     font-family: 'BETTER TOGETHER SPACED';
     color: white;
-    font-size: 30px;
-    
+    font-size: 40px;
+}
+
+.noteTitle{
+     background-color: rgba(82, 50, 11, 0.629);
+     border: 1px solid rgb(103, 89, 20);
+     font-size: 50px;
+}
+
+.iconLittleNote{
+background-color: transparent;
+z-index: 1;
+color: rgb(213, 194, 96);
+cursor: pointer;
 }

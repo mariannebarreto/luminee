@@ -25,7 +25,7 @@ function Home() {
 
   return (
     <section className="notesView">
-      <div className="nameContainer">
+      <nav className="nameContainer">
         <div className="userContainer">
           <img src={userPhoto} alt="userPic" className="userPhoto" />
           <div className="displayName">
@@ -40,8 +40,8 @@ function Home() {
         <div className="btnContainer">
           <MdLogout type="submit" className="logOut" onClick={handleLogOut} size="1.3em" />
         </div>
-      </div>
-      <section className="notesContainer">
+      </nav>
+      <section className="notesHome">
         <ShowNotes />
       </section>
       <footer className="menuContainer">
