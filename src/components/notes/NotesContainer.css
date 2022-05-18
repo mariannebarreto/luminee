@@ -48,3 +48,68 @@ cursor: pointer;
     margin-left: 30px;
     margin-right: -40px;
 }
+
+
+/* --------------ALERT-----*/
+#swal2-html-container {
+    width: auto;
+    height: fit-content;
+    text-align: center;
+    color: #785A10;
+}
+
+#swal2-title {
+    color: #EEE59E;
+}
+
+
+.swal2-popup {
+    background-color: #322D14;
+    color: #EEE59E;
+}
+
+.swal2-styled {
+    color: #7F259D;
+}
+
+.swal2-warning {
+    align-items: center;
+}
+
+.swal2-icon-content {
+    width: auto;
+    color: #EEE59E;
+}
+
+.swal2-icon-content {
+    height: 88px;
+}
+
+.swal2-actions {
+    width: 100%;
+    height: 100%;
+}
+
+.swal2-styled.swal2-confirm {
+    width: 200px;
+    height: 50px;
+}
+
+.swal2-styled.swal2-cancel {
+    width: 200px;
+    height: 50px;
+}
+
+.swal2-timer-progress-bar-container {
+    width: auto;
+    height: auto;
+}
+
+.swal2-styled.swal2-confirm {
+    border: 0;
+    border-radius: 0.25em;
+    background: initial;
+    background-color: #53BAA7;
+    color: #EEE59E;
+    font-size: 1em;
+}
