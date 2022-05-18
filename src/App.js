@@ -4,6 +4,7 @@ import { useAuth } from './lib/firebase-config';
 import Home from './components/home/Home';
 import NewNote from './components/notes/NewNote';
 import Login from './components/auth/Login';
+import PrivateRoute from './components/PrivateRoute';
 import './App.css';
 
 function App() {
@@ -13,8 +14,24 @@ function App() {
 
     <Routes>
       <Route exact path="/" element={<Login />} />
-      <Route exact path="/Home" element={<Home />} />
-      <Route exact path="/NewNote" element={<NewNote />} />
+      <Route
+        exact
+        path="/Home"
+        element={(
+          <PrivateRoute>
+            <Home />
+          </PrivateRoute>
+  )}
+      />
+      <Route
+        exact
+        path="/NewNote"
+        element={(
+          <PrivateRoute>
+            <NewNote />
+          </PrivateRoute>
+)}
+      />
     </Routes>
 
   );

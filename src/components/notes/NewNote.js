@@ -1,7 +1,7 @@
 /* eslint-disable no-console */
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { MdHome, MdBorderColor } from 'react-icons/md';
+import { MdHome } from 'react-icons/md';
 import { BsFileEarmarkCheckFill } from 'react-icons/bs';
 import { auth, notes } from '../../lib/firebase-config';
 import './NewNote.css';
@@ -60,7 +60,6 @@ function NewNote() {
           size="2.5em"
           onClick={handleAddNote}
         />
-        <MdBorderColor type="submit" className="iconNote" size="3em" />
         <MdHome type="submit" className="iconNote" size="3em" onClick={handleNavHome} />
       </footer>
     </section>
