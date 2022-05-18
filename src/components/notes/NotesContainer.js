@@ -29,7 +29,8 @@ function ShowNotes() {
       setNotes(arrayNotes);
     });
   };
-  // RENDERIZA
+
+  // BORRA
   const deleteNote = async (id) => {
     const noteRef = doc(db, 'notes', id);
     await deleteDoc(noteRef);

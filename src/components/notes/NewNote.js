@@ -1,7 +1,7 @@
 /* eslint-disable no-console */
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { MdHome, MdDelete, MdBorderColor } from 'react-icons/md';
+import { MdHome, MdBorderColor } from 'react-icons/md';
 import { BsFileEarmarkCheckFill } from 'react-icons/bs';
 import { auth, notes } from '../../lib/firebase-config';
 import './NewNote.css';
@@ -47,9 +47,6 @@ function NewNote() {
             !
             {' '}
           </div>
-        </div>
-        <div className="btnContainer">
-          <MdDelete type="submit" className="iconNoteDelete" size="1.3em" />
         </div>
       </div>
       <form className="writeAreaContainer">
