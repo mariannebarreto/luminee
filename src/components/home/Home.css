@@ -1,0 +1,74 @@
+.notesView {
+    display: flex;
+    background-image: url('../../assets/backgroundNotes.jpeg');
+    height: 100vh;
+    background-size:cover;
+    background-repeat: no-repeat;
+    margin: none;
+    padding: none;
+}
+
+.nameContainer {
+    display:flex;
+    flex-direction: row;
+    height: 100px;
+    width: 100%;
+    background-color: rgba(109, 66, 15, 0.536);
+    border: 3px solid rgb(254, 239, 179);
+    font-family: 'TAHU!';
+    color: white;
+    font-size: 40px;
+    padding-bottom: 0px;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+}
+.userContainer{
+display: flex;
+flex-direction: row;
+}
+
+.displayName{
+    margin-top: 10px;
+}
+
+.userPhoto {
+    width: 80px;
+    height: 80px;
+    border: 3px solid rgb(254, 239, 179);
+    border-radius: 70%;
+    box-shadow: 0 0 40px rgba(210, 182, 70, 0.72);
+    z-index:1;
+}
+
+.logOut{
+    background-color: transparent;
+    z-index: 1;
+}
+
+.menuContainer {
+    display: flex;
+    align-content: center;
+    height: 100px;
+    width: 100%;
+    background-color: rgba(109, 67, 15, 0.327);
+    border: 3px solid rgb(254, 239, 179);
+    position: fixed;
+    bottom:0;
+    justify-content: center;
+    align-items: center;
+}
+
+.addNote{
+    background-color: transparent;
+    z-index: 1;
+    filter: invert(100%);
+    cursor: pointer;
+}
+
+.notesHome{
+    margin-top: 100px;
+    margin-left: 20px;
+    overflow: auto;
+    height: 75%;
+}

@@ -1,10 +1,10 @@
 import React from 'react';
 import { Navigate } from 'react-router-dom';
-import { useUserAuth } from '../context/authContext';
+import { auth } from '../lib/firebase-config';
 
 // eslint-disable-next-line react/prop-types
 function ProtectedRoute({ children }) {
-  const { user } = useUserAuth();
+  const user = auth.currentUser;
 
   // eslint-disable-next-line no-console
   console.log('Check user in Private: ', user);

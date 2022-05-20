@@ -1,0 +1,111 @@
+
+.allNotes{
+    padding: 4em;
+    display:grid;
+    grid-template-columns: repeat(3, 3fr);
+    grid-gap: 30px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content: center;
+}
+
+.littleNote{
+    height: 200px;
+    width:200px;
+    margin-top: 50px;
+    background-color: rgb(4, 108, 104);
+}
+
+.littleNoteData{
+    font-family: 'BETTER TOGETHER SPACED';
+    color: white;
+    font-size: 30px;
+}
+
+.noteTitle{
+     background-color: rgba(82, 50, 11, 0.629);
+     border: 1px solid rgb(103, 89, 20);
+     font-size: 50px;
+}
+
+.iconContainer{
+display: flex;
+justify-content: space-around;
+margin-top: 40%;
+position: sticky;
+background-color: transparent;
+z-index: 1;
+color: rgb(213, 194, 96);
+cursor: pointer;
+}
+
+.editIcon{
+ margin-left: -40px;
+}
+
+.deleteIcon{
+    margin-left: 30px;
+    margin-right: -40px;
+}
+
+
+/* --------------ALERT-----*/
+#swal2-html-container {
+    width: auto;
+    height: fit-content;
+    text-align: center;
+    color: #785A10;
+}
+
+#swal2-title {
+    color: #EEE59E;
+}
+
+
+.swal2-popup {
+    background-color: #322D14;
+    color: #EEE59E;
+}
+
+.swal2-warning {
+    align-items: center;
+}
+
+.swal2-icon-content {
+    width: auto;
+    color: #EEE59E;
+}
+
+.swal2-icon-content {
+    height: 88px;
+}
+
+.swal2-actions {
+    width: 100%;
+    height: 100%;
+}
+
+.swal2-styled.swal2-confirm {
+    width: 200px;
+    height: 50px;
+}
+
+.swal2-styled.swal2-cancel {
+    width: 200px;
+    height: 50px;
+}
+
+.swal2-timer-progress-bar-container {
+    width: auto;
+    height: auto;
+}
+
+.swal2-styled.swal2-confirm {
+    border: 0;
+    border-radius: 0.25em;
+    background: initial;
+    background-color: #53BAA7;
+    color: #EEE59E;
+    font-size: 1em;
+}

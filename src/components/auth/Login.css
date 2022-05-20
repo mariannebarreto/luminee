@@ -1,0 +1,107 @@
+
+.auth-container{
+    background-image: url('../../assets/background.jpeg');
+    height: 100vh;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+
+.lumineTitle {
+    font-family: 'THE CALIFORNICATION';
+    color: white;
+    font-size: 150px;
+    text-shadow: 3px 8px 10px rgb(237, 209, 86);
+    margin-bottom: 0px;
+    margin-top: -500px;
+}
+
+.sloganContainer{
+    margin-top: -60px;
+    
+}
+.slogan {
+    font-family: 'BETTER TOGETHER SPACED';
+    color: white;
+    font-size: 52px ;
+}
+
+.loginContainer{
+margin-top: 15%;
+text-align: center;
+align-items:center;
+justify-content: center;
+}
+
+.loginWith {
+    font-family: 'COFFEE LATTE';
+    color: white;
+    font-size: 30px;
+}
+
+.btnGoogleContainer{
+    margin-top: 100px;
+    text-align: center;
+    align-items:center;
+    justify-content: center;
+}
+
+/*.g-btn{
+    overflow: hidden;
+    transition: 0.2s;
+    cursor: pointer;display: flex;
+    background-color: aquamarine;
+}
+
+.g-btn:hover {
+    box-shadow: 0 0 40px rgb(179, 240, 254);
+}
+/*.btnGoogle {
+    margin-top:5px;
+    height: 60px;
+    width: 400px;
+    border-radius: 15px;
+    background-color: rgba(93, 60, 6, 0.621);
+    border: 3px solid rgb(254, 239, 179);
+    overflow: hidden;
+    transition: 0.2s;
+    font-family: 'BETTER TOGETHER SPACED';
+    color: bisque;
+    font-size: 50px;
+    cursor: pointer;
+    text-align: center;
+    padding: 0px;
+    line-height: 30px;
+    
+}
+
+.btnGoogle:hover {
+    box-shadow: 0 0 25px rgb(254, 239, 179);
+} */
+
+.footerLogin {
+    display: flex;
+    align-content: center;
+    height: 100px;
+    width: 100%;
+    background-color: rgba(109, 67, 15, 0.327);
+    border: 3px solid rgb(254, 239, 179);
+    position: fixed;
+    padding-bottom: 0px;
+    justify-content: center;
+    align-items: center;
+    bottom: 0;
+    font-family: 'SPACED OUT';
+        color: white;
+        font-size: 20px;
+    }
+
+.copyRight{
+    background-color: transparent;
+        z-index: 1;
+        width: 30px;
+        height: 30px;
+}

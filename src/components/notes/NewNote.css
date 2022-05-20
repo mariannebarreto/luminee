@@ -1,0 +1,103 @@
+body{
+    background-color: rgb(6, 84, 92);
+    padding: 0%;
+}
+
+/*----------- USER DATA DISPLAY + MENU  ------------*/
+.nameContainerNotes{
+    display:flex;
+    flex-direction: row;
+    height: 130px;
+    width: 100%;
+    background-color: rgba(2, 6, 45, 0.811);
+    border: 3px solid rgb(245, 218, 108);
+    box-shadow: 0 0 80px rgba(230, 197, 65, 0.717);
+    font-family: 'TAHU!';
+    color: white;
+    font-size: 40px;
+    padding-bottom: 0px;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.userContainer {
+    display: flex;
+    flex-direction: row;
+}
+
+.displayName {
+    margin-top: 10px;
+}
+
+.userPhoto {
+    width: 80px;
+    height: 80px;
+    border: 3px solid rgb(254, 239, 179);
+    border-radius: 70%;
+    box-shadow: 0 0 40px rgba(210, 182, 70, 0.72);
+    z-index: 1;
+}
+
+.menuContainerNotes {
+display: flex;
+align-content: flex-end;
+height: 100px;
+width: 100%;
+background-color: rgba(2, 6, 45, 0.811);
+border: 3px solid rgb(245, 218, 108);
+position: fixed;
+bottom:0;
+justify-content: space-around;
+align-items: center;
+box-shadow: 0 0 80px rgba(230, 197, 65, 0.717);
+}
+
+.iconNote{
+background-color: transparent;
+z-index: 1;
+filter: invert(100%);
+cursor: pointer;
+}
+
+.iconNoteDelete{
+background-color: transparent;
+z-index: 1;
+cursor: pointer;
+}
+
+/*------------- WRITE AREA ---*/
+
+.writeAreaContainer{
+    display: flex;
+    flex-direction: column;
+    margin-top: 40px;
+    margin-left: 30px;
+    margin-right: 10px;
+}
+
+#titleNote{
+    background-color: transparent;
+    height: 75px;
+    font-family: 'BETTER TOGETHER SPACED';
+    color: white;
+    font-size: 70px;
+    border:none;
+}
+
+#titleNote:focus{
+outline: none;
+}
+
+#bodyNote{
+    margin-top: 40px;
+    background-color: transparent;
+    height: 60px;
+    font-family: 'BETTER TOGETHER SPACED';
+    color: white;
+    font-size: 55px;
+    border: none;
+}
+
+#bodyNote:focus {
+    outline: none;
+}
