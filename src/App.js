@@ -2,6 +2,7 @@ import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 import { useAuth } from './lib/firebase-config';
 import Home from './components/home/Home';
+import EditNote from './components/notes/EditNote';
 import NewNote from './components/notes/NewNote';
 import Login from './components/auth/Login';
 import PrivateRoute from './components/PrivateRoute';
@@ -32,6 +33,16 @@ function App() {
           </PrivateRoute>
 )}
       />
+      <Route
+        exact
+        path="/EditNote"
+        element={(
+          <PrivateRoute>
+            <NewNote />
+          </PrivateRoute>
+)}
+      />
+
     </Routes>
 
   );

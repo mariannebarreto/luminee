@@ -1,0 +1,11 @@
+body {
+    background-color: rgb(6, 84, 92);
+    padding: 0%;
+}
+
+.iconNote {
+    background-color: transparent;
+    z-index: 1;
+    filter: invert(100%);
+    cursor: pointer;
+}
