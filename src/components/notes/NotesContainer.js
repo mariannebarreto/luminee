@@ -23,6 +23,7 @@ function ShowNotes() {
 
   const [notes, setNotes] = useState([]);
 
+  // RENDERIZA NOTAS
   const getNotes = async () => {
     const userID = auth.currentUser;
     const { uid } = userID;

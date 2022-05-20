@@ -10,8 +10,8 @@ body{
     height: 130px;
     width: 100%;
     background-color: rgba(2, 6, 45, 0.811);
-    border: 3px solid rgb(127, 102, 2);
-    box-shadow: 0 0 40px rgba(189, 157, 30, 0.58);
+    border: 3px solid rgb(245, 218, 108);
+    box-shadow: 0 0 80px rgba(230, 197, 65, 0.717);
     font-family: 'TAHU!';
     color: white;
     font-size: 40px;
@@ -44,12 +44,12 @@ align-content: flex-end;
 height: 100px;
 width: 100%;
 background-color: rgba(2, 6, 45, 0.811);
-border: 3px solid rgb(127, 102, 2);
+border: 3px solid rgb(245, 218, 108);
 position: fixed;
 bottom:0;
 justify-content: space-around;
 align-items: center;
-box-shadow: 0 0 40px rgba(189, 157, 30, 0.58);
+box-shadow: 0 0 80px rgba(230, 197, 65, 0.717);
 }
 
 .iconNote{

@@ -1,11 +1,110 @@
-body {
-    background-color: rgb(6, 84, 92);
+.editView {
+    background-color: rgb(80, 57, 7);
     padding: 0%;
+    height: 1200px;
+    
 }
+
+/*----------- USER DATA DISPLAY + MENU  ------------*/
+.topContainer {
+    display: flex;
+    flex-direction: row;
+    height: 130px;
+    width: 100%;
+    background-color: rgba(2, 6, 45, 0.811);
+    border: 3px solid rgb(245, 218, 108);
+    box-shadow: 0 0 80px rgba(230, 197, 65, 0.529);
+    font-family: 'TAHU!';
+    color: white;
+    font-size: 40px;
+    padding-bottom: 0px;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.headerContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+.closeContainer{
+    display: flex;
+    justify-content: flex-end;
+    margin-left: 15px;
+}
+
+.footerMenu {
+    display: flex;
+    align-content: flex-end;
+    height: 100px;
+    width: 100%;
+    margin-left: -30px;
+    background-color: rgba(2, 6, 45, 0.811);
+    border: 3px solid rgb(245, 218, 108);
+    position: fixed;
+    bottom: 0;
+    justify-content: space-around;
+    align-items: center;
+    box-shadow: 0 0 80px rgba(230, 197, 65, 0.717);
+}
+
+/* ------ICONOS ---*/
+
 
 .iconNote {
     background-color: transparent;
     z-index: 1;
     filter: invert(100%);
     cursor: pointer;
+}
+
+.iconNoteDelete {
+    background-color: transparent;
+    z-index: 1;
+    cursor: pointer;
+}
+
+.iconClose{
+    background-color: transparent;
+        z-index: 1;
+        cursor: pointer;
+        color: white;
+}
+
+/*------------- WRITE AREA ---*/
+
+.writeAreaContainer {
+    display: flex;
+    flex-direction: column;
+    margin-top: 40px;
+    margin-left: 30px;
+    margin-right: 10px;
+}
+
+#titleNote {
+    background-color: transparent;
+    height: 75px;
+    font-family: 'BETTER TOGETHER SPACED';
+    color: white;
+    font-size: 70px;
+    border: none;
+}
+
+#titleNote:focus {
+    outline: none;
+}
+
+#bodyNote {
+    margin-top: 40px;
+    background-color: transparent;
+    height: 60px;
+    font-family: 'BETTER TOGETHER SPACED';
+    color: white;
+    font-size: 55px;
+    border: none;
+}
+
+#bodyNote:focus {
+    outline: none;
 }

@@ -1,6 +1,6 @@
 /* eslint-disable no-console */
 /* eslint-disable no-shadow */
-import { useState, useEffect } from 'react';
+/*import { useState, useEffect } from 'react';
 import { MdHome } from 'react-icons/md';
 import { BsFileEarmarkCheckFill } from 'react-icons/bs';
 import { useParams, useNavigate } from 'react-router-dom';
@@ -25,7 +25,7 @@ function EditNote() {
     setNoteText(event.target.value);
   }; */
 
-  const { id } = useParams();
+ /* const { id } = useParams();
 
   const handleUpdate = async (e) => {
     e.preventDefault();
@@ -75,3 +75,11 @@ function EditNote() {
 }
 
 export default EditNote;
+
+<div className="closeContainer">
+          <IoIosCloseCircle
+            type="submit"
+            className="iconClose"
+            size="1.3em"
+          />
+        </div> */

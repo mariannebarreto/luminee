@@ -38,7 +38,7 @@ function App() {
         path="/EditNote"
         element={(
           <PrivateRoute>
-            <NewNote />
+            <EditNote />
           </PrivateRoute>
 )}
       />
