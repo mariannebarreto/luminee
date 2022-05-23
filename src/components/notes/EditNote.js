@@ -1,32 +1,16 @@
-/* eslint-disable react/prop-types */
-/* eslint-disable no-console */
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { BsFileEarmarkCheckFill } from 'react-icons/bs';
 import { IoIosCloseCircle } from 'react-icons/io';
 import { MdHome } from 'react-icons/md';
-import {
-  doc,
-  query,
-  limit,
-  QuerySnapshot,
-  DocumentData,
-} from 'firebase/firestore';
-import { notesRef } from '../../lib/firebase-config';
 import './EditNote.css';
 
-function EditNote({ id }) {
+function EditNote() {
   const navigate = useNavigate();
 
   const handleNavHome = () => {
     navigate('/Home');
   };
-
-  // 1. hacer referencia al documento en la colección
-
-  const docRef = doc(notesRef, 'notes', id);
-
-  // 2. Obtener
 
   return (
   /* <div>

@@ -6,7 +6,7 @@ import {
   getAuth, GoogleAuthProvider, signInWithPopup, onAuthStateChanged,
 } from 'firebase/auth';
 import {
-  getFirestore, collection, addDoc, serverTimestamp, doc,
+  getFirestore, collection, addDoc, serverTimestamp, doc, deleteDoc,
 } from 'firebase/firestore';
 import { getStorage } from 'firebase/storage';
 
@@ -39,6 +39,12 @@ export const notes = (title, note) => {
     userID: uid,
     date: serverTimestamp(),
   });
+};
+
+// ----- DELETE NOTE
+export const deleteNote = async (id) => {
+  const noteDoc = doc(db, 'notes', id);
+  await deleteDoc(noteDoc);
 };
 
 // --------- GET NOTES TO RENDER
