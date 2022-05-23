@@ -6,9 +6,9 @@ import { MdDelete, MdEditNote } from 'react-icons/md';
 import Swal from 'sweetalert2';
 import withReactContent from 'sweetalert2-react-content';
 import {
-  collection, query, getDocs, orderBy,
+  collection, query, orderBy, getDocs,
 } from 'firebase/firestore';
-import { db, auth } from '../../lib/firebase-config';
+import { db, auth, deleteNote } from '../../lib/firebase-config';
 import './EditNote';
 import './NotesContainer.css';
 
@@ -24,32 +24,27 @@ function ShowNotes() {
   const [notes, setNotes] = useState([]);
 
   // RENDERIZA NOTAS
+
   const getNotes = async () => {
     const userID = auth.currentUser;
-    // eslint-disable-next-line no-unused-vars
     const { uid } = userID;
     const arrayNotes = [];
     const q = query(collection(db, 'notes'), orderBy('date', 'desc'));
+
     const post = await getDocs(q);
     console.log(post);
-    post.forEach((doc) => {
-      arrayNotes.push({ ...doc.data(), id: doc.id });
-      // doc.data() is never undefined for query doc snapshots
-      console.log(doc.id, ' => ', doc.data());
-    });
 
-    /* onSnapshot(q, (QuerySnapshot) => {
-      QuerySnapshot.forEach((docs) => {
-        if (docs.data().userID === uid) {
-          arrayNotes.push({ ...docs.data(), id: docs.id });
-          console.log(docs.id);
-        }
-      }); */
+    post.forEach((doc) => {
+      if (doc.data().userID === uid) {
+        arrayNotes.push({ ...doc.data(), id: doc.id });
+      }
+    });
     setNotes(arrayNotes);
   };
 
   // BORRA
-  /* const deleteNote = async (id) => {
+
+  /* const deleteData = async (id) => {
     const noteRef = doc(db, 'notes', id);
     await deleteDoc(noteRef);
     getNotes();
