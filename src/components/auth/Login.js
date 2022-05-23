@@ -35,7 +35,7 @@ function Login() {
       </form>
       <footer className="footerLogin">
         <BiCopyright className="copyRight" />
-        <p claasName="credits">2022. Mariana Hernández Barreto.   </p>
+        <p claasName="credits">2022. Mariana Hernandez Barreto.   </p>
       </footer>
 
     </section>

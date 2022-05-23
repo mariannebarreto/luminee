@@ -11,12 +11,12 @@ import {
 import { getStorage } from 'firebase/storage';
 
 export const firebaseConfig = {
-  apiKey: 'AIzaSyArQOJp9K4omHjX4-pqzGI_UPxB6ffc7jc',
-  authDomain: 'luminee-cddcf.firebaseapp.com',
-  projectId: 'luminee-cddcf',
-  storageBucket: 'luminee-cddcf.appspot.com',
-  messagingSenderId: '265273625224',
-  appId: '1:265273625224:web:e34ae0f3fb24558a37ed3d',
+  apiKey: 'AIzaSyBz3R7HKfTg_TutkkRpNJ08k7zr-CKL9qA',
+  authDomain: 'lumine-a3594.firebaseapp.com',
+  projectId: 'lumine-a3594',
+  storageBucket: 'lumine-a3594.appspot.com',
+  messagingSenderId: '394044920083',
+  appId: '1:394044920083:web:7334a177b8b9f8455b4ae6',
 };
 
 // Initialize Firebase
