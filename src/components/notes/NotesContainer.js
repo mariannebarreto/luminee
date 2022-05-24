@@ -6,9 +6,9 @@ import { MdDelete, MdEditNote } from 'react-icons/md';
 import Swal from 'sweetalert2';
 import withReactContent from 'sweetalert2-react-content';
 import {
-  collection, query, orderBy, getDocs,
+  collection, query, orderBy, getDocs, deleteDoc, doc,
 } from 'firebase/firestore';
-import { db, auth, deleteNote } from '../../lib/firebase-config';
+import { db, auth } from '../../lib/firebase-config';
 import './EditNote';
 import './NotesContainer.css';
 
@@ -34,6 +34,7 @@ function ShowNotes() {
     const post = await getDocs(q);
     console.log(post);
 
+    // eslint-disable-next-line no-shadow
     post.forEach((doc) => {
       if (doc.data().userID === uid) {
         arrayNotes.push({ ...doc.data(), id: doc.id });
@@ -43,12 +44,11 @@ function ShowNotes() {
   };
 
   // BORRA
-
-  /* const deleteData = async (id) => {
+  const deleteNote = async (id) => {
     const noteRef = doc(db, 'notes', id);
     await deleteDoc(noteRef);
     getNotes();
-  }; */
+  };
 
   // SWEET ALERT
 

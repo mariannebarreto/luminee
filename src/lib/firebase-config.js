@@ -41,27 +41,13 @@ export const notes = (title, note) => {
   });
 };
 
+// RENDERIZA NOTAS
+
 // ----- DELETE NOTE
 export const deleteNote = async (id) => {
   const noteDoc = doc(db, 'notes', id);
   await deleteDoc(noteDoc);
 };
-
-// --------- GET NOTES TO RENDER
-
-/* export const qry = () => {
-  const user = auth.currentUser;
-  const { uid } = user;
-  const q = (query(notesRef, ('uid', '==', uid), orderBy('timestamp', 'desc')));
-  return q;
-};
-
-export const getNotesCol = async () => {
-  const user = auth.currentUser;
-  const { uid } = user;
-  const orderRef = await getDocs(query(notesRef, ('uid', '==', uid), orderBy('timestamp', 'desc')));
-  return orderRef;
-}; */
 
 // ----- HOOK USEAUTH
 
