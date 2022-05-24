@@ -22,8 +22,7 @@ function EditNote() {
   };
 
   // funcion que la actualiza
-  const update = async (e) => {
-    e.preventDefault();
+  const update = async () => {
     const noteRef = doc(db, 'notes', id);
     const data = { title: noteTitle, note: noteText };
     await updateDoc(noteRef, data);
@@ -58,7 +57,7 @@ function EditNote() {
           {' '}
         </header>
       </div>
-      <form className="writeAreaContainer" onSubmit={update}>
+      <form className="writeAreaContainer">
         <input
           type="text"
           id="titleNote"
@@ -80,6 +79,7 @@ function EditNote() {
             type="submit"
             className="iconNote"
             size="2.5em"
+            onClick={() => { update(id); }}
           />
           <MdHome type="submit" className="iconNote" size="3em" onClick={handleNavHome} />
           <IoIosCloseCircle
