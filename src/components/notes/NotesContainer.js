@@ -17,8 +17,9 @@ const MySwal = withReactContent(Swal);
 function ShowNotes() {
   // NAVEGA
   const navigate = useNavigate();
-  const handleEdit = () => {
-    navigate('/EditNote');
+
+  const handleEdit = (id) => {
+    navigate(`${'/EditNote/'}${id}`);
   };
 
   const [notes, setNotes] = useState([]);
@@ -89,7 +90,7 @@ function ShowNotes() {
             <p className="noteText">{note.note}</p>
           </div>
           <footer className="iconContainer">
-            <MdEditNote className="editIcon" size="1.8em" type="button" onClick={handleEdit} />
+            <MdEditNote className="editIcon" size="1.8em" type="button" onClick={() => { handleEdit(note.id); }} />
             <MdDelete className="deleteIcon" size="1.8em" type="" onClick={() => { handleDeleteNotes(note.id); }} />
           </footer>
         </div>
