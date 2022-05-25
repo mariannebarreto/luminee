@@ -20,7 +20,7 @@
 .littleNoteData{
     font-family: 'BETTER TOGETHER SPACED';
     color: white;
-    font-size: 30px;
+    font-size: 40px;
 }
 
 .noteTitle{
@@ -32,7 +32,7 @@
 .iconContainer{
 display: flex;
 justify-content: space-around;
-margin-top: 40%;
+margin-top: 35%;
 position: sticky;
 background-color: transparent;
 z-index: 1;
