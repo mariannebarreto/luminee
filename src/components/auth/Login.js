@@ -25,6 +25,18 @@ function Login() {
       <div className="sloganContainer"><p className="slogan">Enlight your ideas</p></div>
       <form className="loginContainer">
         <Grid container direction="column" alignItems="center" justifyContent="center">
+          <div className="loginWithContainer">
+
+            <p className="loginWithText">Login with: </p>
+
+            <input
+              type="email"
+              className="inputs"
+              id="inputEmail"
+              placeholder="Email:"
+            />
+          </div>
+
           <GoogleButton
             className="btnGoogleContainer"
             type="light"

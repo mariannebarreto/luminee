@@ -36,8 +36,10 @@ align-items:center;
 justify-content: center;
 }
 
-.loginWith {
-    font-family: 'COFFEE LATTE';
+
+
+.loginWithText {
+    font-family: 'BALIHO';
     color: white;
     font-size: 30px;
 }
