@@ -1,7 +1,6 @@
 /* eslint-disable no-console */
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import Grid from '@mui/material/Grid';
 import GoogleButton from 'react-google-button';
 import { BiCopyright } from 'react-icons/bi';
 import './Login.css';
@@ -24,10 +23,12 @@ function Login() {
       <header className="lumineTitle">Lumine</header>
       <div className="sloganContainer"><p className="slogan">Enlight your ideas</p></div>
       <form className="loginContainer">
-        <Grid container direction="column" alignItems="center" justifyContent="center">
-          <div className="loginWithContainer">
 
-            <p className="loginWithText">Login with: </p>
+        <div className="loginWithContainer">
+
+          <p className="loginWithText">Login with: </p>
+
+          <div className="inputsContainer">
 
             <input
               type="email"
@@ -35,14 +36,24 @@ function Login() {
               id="inputEmail"
               placeholder="Email:"
             />
-          </div>
 
-          <GoogleButton
-            className="btnGoogleContainer"
-            type="light"
-            onClick={handleGoogleSignIn}
-          />
-        </Grid>
+            <input
+              type="password"
+              className="inputs"
+              id="inputPassword"
+              placeholder="Password:"
+            />
+
+          </div>
+        </div>
+
+        <p className="loginWithText">Or select: </p>
+
+        <GoogleButton
+          className="btnGoogleContainer"
+          type="light"
+          onClick={handleGoogleSignIn}
+        />
 
       </form>
       <footer className="footerLogin">
