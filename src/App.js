@@ -35,7 +35,7 @@ function App() {
       />
       <Route
         exact
-        path="/EditNote"
+        path="/EditNote/:id"
         element={(
           <PrivateRoute>
             <EditNote />

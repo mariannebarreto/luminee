@@ -6,17 +6,17 @@ import {
   getAuth, GoogleAuthProvider, signInWithPopup, onAuthStateChanged,
 } from 'firebase/auth';
 import {
-  getFirestore, collection, addDoc, serverTimestamp, doc,
+  getFirestore, collection, addDoc, serverTimestamp, doc, deleteDoc,
 } from 'firebase/firestore';
 import { getStorage } from 'firebase/storage';
 
 export const firebaseConfig = {
-  apiKey: 'AIzaSyArQOJp9K4omHjX4-pqzGI_UPxB6ffc7jc',
-  authDomain: 'luminee-cddcf.firebaseapp.com',
-  projectId: 'luminee-cddcf',
-  storageBucket: 'luminee-cddcf.appspot.com',
-  messagingSenderId: '265273625224',
-  appId: '1:265273625224:web:e34ae0f3fb24558a37ed3d',
+  apiKey: 'AIzaSyBz3R7HKfTg_TutkkRpNJ08k7zr-CKL9qA',
+  authDomain: 'lumine-a3594.firebaseapp.com',
+  projectId: 'lumine-a3594',
+  storageBucket: 'lumine-a3594.appspot.com',
+  messagingSenderId: '394044920083',
+  appId: '1:394044920083:web:7334a177b8b9f8455b4ae6',
 };
 
 // Initialize Firebase
@@ -41,21 +41,13 @@ export const notes = (title, note) => {
   });
 };
 
-// --------- GET NOTES TO RENDER
+// RENDERIZA NOTAS
 
-/* export const qry = () => {
-  const user = auth.currentUser;
-  const { uid } = user;
-  const q = (query(notesRef, ('uid', '==', uid), orderBy('timestamp', 'desc')));
-  return q;
+// ----- DELETE NOTE
+export const deleteNote = async (id) => {
+  const noteDoc = doc(db, 'notes', id);
+  await deleteDoc(noteDoc);
 };
-
-export const getNotesCol = async () => {
-  const user = auth.currentUser;
-  const { uid } = user;
-  const orderRef = await getDocs(query(notesRef, ('uid', '==', uid), orderBy('timestamp', 'desc')));
-  return orderRef;
-}; */
 
 // ----- HOOK USEAUTH
 

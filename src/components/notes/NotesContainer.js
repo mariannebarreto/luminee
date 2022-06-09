@@ -6,7 +6,7 @@ import { MdDelete, MdEditNote } from 'react-icons/md';
 import Swal from 'sweetalert2';
 import withReactContent from 'sweetalert2-react-content';
 import {
-  collection, query, onSnapshot, orderBy, doc, deleteDoc,
+  collection, query, orderBy, getDocs, deleteDoc, doc,
 } from 'firebase/firestore';
 import { db, auth } from '../../lib/firebase-config';
 import './EditNote';
@@ -17,26 +17,31 @@ const MySwal = withReactContent(Swal);
 function ShowNotes() {
   // NAVEGA
   const navigate = useNavigate();
-  const handleEdit = () => {
-    navigate('/EditNote');
+
+  const handleEdit = (id) => {
+    navigate(`${'/EditNote/'}${id}`);
   };
 
   const [notes, setNotes] = useState([]);
 
   // RENDERIZA NOTAS
+
   const getNotes = async () => {
     const userID = auth.currentUser;
     const { uid } = userID;
     const arrayNotes = [];
     const q = query(collection(db, 'notes'), orderBy('date', 'desc'));
-    onSnapshot(q, (QuerySnapshot) => {
-      QuerySnapshot.forEach((docs) => {
-        if (docs.data().userID === uid) {
-          arrayNotes.push({ ...docs.data(), id: docs.id });
-        }
-      });
-      setNotes(arrayNotes);
+
+    const post = await getDocs(q);
+    console.log(post);
+
+    // eslint-disable-next-line no-shadow
+    post.forEach((doc) => {
+      if (doc.data().userID === uid) {
+        arrayNotes.push({ ...doc.data(), id: doc.id });
+      }
     });
+    setNotes(arrayNotes);
   };
 
   // BORRA
@@ -48,7 +53,7 @@ function ShowNotes() {
 
   // SWEET ALERT
 
-  const HandleDeleteNotes = (id) => {
+  const handleDeleteNotes = (id) => {
     MySwal.fire({
       title: 'Are you sure?',
       text: "You won't be able to revert this!",
@@ -79,14 +84,14 @@ function ShowNotes() {
   return (
     <section className="allNotes">
       { notes.map((note) => (
-        <div className="littleNote">
-          <div key={note.id} className="littleNoteData">
+        <div className="littleNote" key={note.id}>
+          <div className="littleNoteData">
             <p className="noteTitle">{note.title}</p>
             <p className="noteText">{note.note}</p>
           </div>
           <footer className="iconContainer">
-            <MdEditNote className="editIcon" size="1.8em" type="submit" onClick={handleEdit} />
-            <MdDelete className="deleteIcon" size="1.8em" type="submit" onClick={() => { HandleDeleteNotes(note.id); }} />
+            <MdEditNote className="editIcon" size="1.8em" type="button" onClick={() => { handleEdit(note.id); }} />
+            <MdDelete className="deleteIcon" size="1.8em" type="" onClick={() => { handleDeleteNotes(note.id); }} />
           </footer>
         </div>
 

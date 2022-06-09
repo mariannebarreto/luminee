@@ -20,7 +20,7 @@ function Home() {
   };
 
   const handleAddNote = () => {
-    navigate('/newnote');
+    navigate('/Newnote');
   };
 
   return (
